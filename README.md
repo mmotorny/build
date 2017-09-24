@@ -48,10 +48,16 @@ mkdir your_project
 cd your_project
 ```
 
-Checkout the GN configuration.
+*Option 1.* Clone the GN configuration.
 
 ```shell
 git clone https://github.com/mmotorny/build.git
+```
+
+*Option 2.* If your project is tracked by Git, add the GN configuration as a submodule.
+
+```shell
+git submodule add https://github.com/mmotorny/build build
 ```
 
 Create a `.gn` file to indicate the source root.
