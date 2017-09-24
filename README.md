@@ -3,7 +3,9 @@
 *by Maksym Motornyy (mmotorny@gmail.com)*
 
 [Instructions for Linux](#instructions-for-linux)
+
 [Instructions for macOS](#instructions-for-macos)
+
 [Instructions for Windows](#instructions-for-windows)
 
 
