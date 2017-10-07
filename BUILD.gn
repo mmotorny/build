@@ -2,4 +2,8 @@
 # Use of this source code is governed by a BSD-style license that can be found 
 # in the LICENSE file.
 
-set_default_toolchain("//build/toolchain/xcode:xcode")
+config("source-tree-absolute-includes") {
+  include_dirs = [
+    "//",
+  ]
+}
