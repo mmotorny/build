@@ -1,0 +1,27 @@
+# Copyright (c) 2017, Maksym Motornyy. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be found 
+# in the LICENSE file.
+
+# If not specified explicitly, assume that the target OS is the same as host OS.
+if (target_os == "") {
+  target_os = host_os
+}
+if (target_cpu == "") {
+  target_cpu = host_cpu
+}
+
+# Autodetect the toolchain.
+import("//build/toolchains/autodetect.gni")
+
+# Default configs for all compilers.
+default_compiler_configs = [
+  # See https://github.com/mmotorny/build/blob/master/configs/README.md.
+]
+
+# Set defaults for all target types.
+set_defaults("executable") {
+  configs = default_compiler_configs
+}
+set_defaults("source_set") {
+  configs = default_compiler_configs
+}

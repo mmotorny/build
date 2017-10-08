@@ -1,0 +1,17 @@
+# Copyright (c) 2017, Maksym Motornyy. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be found 
+# in the LICENSE file.
+
+current_toolchain_dir = get_label_info(current_toolchain, "dir")
+
+config("pedantic") {
+  configs = [
+    "${current_toolchain_dir}/configs/warnings:pedantic",
+  ]
+}
+
+config("treat_as_errors") {
+  configs = [
+    "${current_toolchain_dir}/configs/warnings:treat_as_errors",
+  ]
+}

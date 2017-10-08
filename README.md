@@ -56,11 +56,13 @@ git clone https://github.com/mmotorny/build.git
 git submodule add https://github.com/mmotorny/build build
 ```
 
-Create a `.gn` file to indicate the source root.
+Initialize the source root with templates of `.gn` and `BUILDCONFIG.gn` files.
 
 ```sh
-echo 'buildconfig = "//build/BUILDCONFIG.gn"' > .gn
+cp build/templates/*.gn .
 ```
+
+*Optional.* [Customize `BUILDCONFIG.gn`](/templates/README.md).
 
 Now you are ready to [write a `BUILD.gn` file](https://chromium.googlesource.com/chromium/src/tools/gn/+/HEAD/docs/quick_start.md#adding-a-build-file).
 
@@ -109,11 +111,13 @@ git clone https://github.com/mmotorny/build.git
 git submodule add https://github.com/mmotorny/build build
 ```
 
-Create a `.gn` file to indicate the source root.
+Initialize the source root with templates of `.gn` and `BUILDCONFIG.gn` files.
 
 ```sh
-echo 'buildconfig = "//build/BUILDCONFIG.gn"' > .gn
+cp build/templates/*.gn .
 ```
+
+*Optional.* [Customize `BUILDCONFIG.gn`](/templates/README.md).
 
 Now you are ready to [write a `BUILD.gn` file](https://chromium.googlesource.com/chromium/src/tools/gn/+/HEAD/docs/quick_start.md#adding-a-build-file).
 
