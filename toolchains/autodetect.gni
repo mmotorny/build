@@ -2,7 +2,9 @@
 # Use of this source code is governed by a BSD-style license that can be found 
 # in the LICENSE file.
 
-if (target_os == "mac") {
+if (target_os == "linux") {
+  set_default_toolchain("//build/toolchains/gcc")
+} else if (target_os == "mac") {
   set_default_toolchain("//build/toolchains/xcode")
 } else {
   assert(false, "Unable to autodetect the toolchain for the target OS \"${target_os}\".")

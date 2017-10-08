@@ -1,0 +1,37 @@
+# Copyright (c) 2017, Maksym Motornyy. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be found 
+# in the LICENSE file.
+
+toolchain("gcc") {
+  lib_switch = "-l"
+  lib_dir_switch = "-L"
+
+  tool("cxx") {
+    depfile = "{{output}}.d"
+    command = "gcc -x c++ -MMD -MF $depfile {{defines}} {{include_dirs}} {{cflags}} {{cflags_cc}} -c {{source}} -o {{output}}"
+    depsformat = "gcc"
+    description = "Compiling {{source}}"
+    outputs = [
+      "{{source_out_dir}}/{{source_name_part}}.o",
+    ]
+  }
+
+  tool("link") {
+    output = "{{target_output_name}}{{output_extension}}"
+    command = "g++ {{ldflags}} -o $output {{inputs}} {{solibs}} {{libs}}"
+    description = "Linking $output"
+    outputs = [
+      output,
+    ]
+  }
+
+  tool("stamp") {
+    command = "touch {{output}}"
+    description = "Stamping {{output}}"
+  }
+
+  tool("copy") {
+    command = "cp -af {{source}} {{output}}"
+    description = "Copying {{source}} to {{output}}"
+  }
+}
