@@ -183,7 +183,7 @@ git submodule add https://github.com/mmotorny/build build
 Initialize the source root with templates of `.gn` and `BUILDCONFIG.gn` files.
 
 ```sh
-cp build/templates/*.gn .
+copy build\templates\*.gn .
 ```
 
 *Optional.* [Customize `BUILDCONFIG.gn`](/templates/README.md).
