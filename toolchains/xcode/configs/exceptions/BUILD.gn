@@ -4,12 +4,12 @@
 
 config("enable") {
   cflags_cc = [
-    "/EHsc",
+    "-fexceptions",
   ]
 }
 
 config("disable") {
   cflags_cc = [
-    "/D_HAS_EXCEPTIONS=0",
+    "-fno-exceptions",
   ]
 }
