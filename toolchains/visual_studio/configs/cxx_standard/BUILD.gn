@@ -4,30 +4,30 @@
 
 config("cxx_98_or_higher") {
   cflags_cc = [
-    "-std=c++98",
+    "/std:c++14",
   ]
 }
 
 config("cxx_03_or_higher") {
   cflags_cc = [
-    "-std=c++03",
+    "/std:c++14",
   ]
 }
 
 config("cxx_11_or_higher") {
   cflags_cc = [
-    "-std=c++11",
+    "/std:c++14",
   ]
 }
 
 config("cxx_14_or_higher") {
   cflags_cc = [
-    "-std=c++14",
+    "/std:c++14",
   ]
 }
 
 config("cxx_17_or_higher") {
   cflags_cc = [
-    "-std=c++1z",
+    "/std:c++17",
   ]
 }

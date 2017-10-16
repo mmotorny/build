@@ -28,8 +28,8 @@ Specify configs that apply to all compilers by setting `default_compiler_configs
 
 ```python
 default_compiler_configs = [
-  # Compile as C++14.
-  "//build/configs/cxx_standard:cxx_14",
+  # Compile as C++14 or higher.
+  "//build/configs/cxx_standard:cxx_14_or_higher",
   
   # Enable source-tree absolute paths in #include statements.
   "//build/configs/include_dirs:source_tree_absolute",

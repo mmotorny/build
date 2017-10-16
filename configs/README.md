@@ -30,33 +30,47 @@ Treat warnings as errors.
 
 ### C++ standard
 
-Compile as C++98.
+Compile as C++98 or higher.
 
 ```
-//build/configs/cxx_standard:cxx_98
+//build/configs/cxx_standard:cxx_98_or_higher
 ```
 
-Compile as C++03.
+Compile as C++03 or higher.
 
 ```
-//build/configs/cxx_standard:cxx_03
+//build/configs/cxx_standard:cxx_03_or_higher
 ```
 
-Compile as C++11.
+Compile as C++11 or higher.
 
 ```
-//build/configs/cxx_standard:cxx_11
+//build/configs/cxx_standard:cxx_11_or_higher
 ```
 
-Compile as C++14.
+Compile as C++14 or higher.
 
 ```
-//build/configs/cxx_standard:cxx_14
+//build/configs/cxx_standard:cxx_14_or_higher
 ```
 
-Compile as C++17.
+Compile as C++17 or higher.
 
 ```
-//build/configs/cxx_standard:cxx_17
+//build/configs/cxx_standard:cxx_17_or_higher
+```
+
+### Exceptions
+
+Enable exceptions.
+
+```
+//build/configs/exceptions:enable
+```
+
+Disable exceptions.
+
+```
+//build/configs/exceptions:disable
 ```
 

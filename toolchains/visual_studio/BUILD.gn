@@ -1,0 +1,41 @@
+# Copyright (c) 2017, Maksym Motornyy. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be found 
+# in the LICENSE file.
+
+toolchain("visual_studio") {
+  lib_switch = ""
+  lib_dir_switch = "/LIBPATH:"
+
+  tool("cxx") {
+    rspfile = "{{output}}.rsp"
+    rspfile_content = "{{defines}} {{include_dirs}} {{cflags}} {{cflags_cc}}"
+    command = "cl /nologo /showIncludes @$rspfile /Fo{{output}} /c {{source}}"
+    depsformat = "msvc"
+    description = "Compiling {{source}}"
+    outputs = [
+      "{{source_out_dir}}/{{source_name_part}}.obj",
+    ]
+  }
+
+  tool("link") {
+    default_output_extension = ".exe"
+    output = "{{target_output_name}}{{output_extension}}"
+    rspfile = "$output.rsp"
+    rspfile_content = "{{inputs_newline}} {{libs}} {{solibs}} {{ldflags}}"
+    command = "link /NOLOGO /OUT:$output @$rspfile"
+    description = "Linking $output"
+    outputs = [
+      output,
+    ]
+  }
+
+  tool("stamp") {
+    command = "powershell -Command try { \$output = Get-Item -Path {{output}} -ErrorAction Stop } catch { \$output = New-Item -Path {{output}} }; \$output.LastWriteTime = Get-Date"
+    description = "Stamping {{output}}"
+  }
+
+  tool("copy") {
+    command = "powershell -Command Remove-Item -Path {{output}} -Recurse -ErrorAction SilentlyContinue; Copy-Item -Path {{source}} -Destination {{output}} -Recurse"
+    description = "Copying {{source}} to {{output}}"
+  }
+}

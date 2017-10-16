@@ -2,31 +2,31 @@
 # Use of this source code is governed by a BSD-style license that can be found 
 # in the LICENSE file.
 
-config("cxx_98") {
+config("cxx_98_or_higher") {
   cflags_cc = [
     "-std=c++98",
   ]
 }
 
-config("cxx_03") {
+config("cxx_03_or_higher") {
   cflags_cc = [
     "-std=c++03",
   ]
 }
 
-config("cxx_11") {
+config("cxx_11_or_higher") {
   cflags_cc = [
     "-std=c++11",
   ]
 }
 
-config("cxx_14") {
+config("cxx_14_or_higher") {
   cflags_cc = [
     "-std=c++14",
   ]
 }
 
-config("cxx_17") {
+config("cxx_17_or_higher") {
   cflags_cc = [
     "-std=c++1z",
   ]

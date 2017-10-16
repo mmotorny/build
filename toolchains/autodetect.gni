@@ -6,6 +6,8 @@ if (target_os == "linux") {
   set_default_toolchain("//build/toolchains/gcc")
 } else if (target_os == "mac") {
   set_default_toolchain("//build/toolchains/xcode")
+} else if (target_os == "win") {
+  set_default_toolchain("//build/toolchains/visual_studio")
 } else {
   assert(false, "Unable to autodetect the toolchain for the target OS \"${target_os}\".")
 }

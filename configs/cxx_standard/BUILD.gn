@@ -4,32 +4,32 @@
 
 current_toolchain_dir = get_label_info(current_toolchain, "dir")
 
-config("cxx_98") {
+config("cxx_98_or_higher") {
   configs = [
-    "${current_toolchain_dir}/configs/cxx_standard:cxx_98",
+    "${current_toolchain_dir}/configs/cxx_standard:cxx_98_or_higher",
   ]
 }
 
-config("cxx_03") {
+config("cxx_03_or_higher") {
   configs = [
-    "${current_toolchain_dir}/configs/cxx_standard:cxx_03",
+    "${current_toolchain_dir}/configs/cxx_standard:cxx_03_or_higher",
   ]
 }
 
-config("cxx_11") {
+config("cxx_11_or_higher") {
   configs = [
-    "${current_toolchain_dir}/configs/cxx_standard:cxx_11",
+    "${current_toolchain_dir}/configs/cxx_standard:cxx_11_or_higher",
   ]
 }
 
-config("cxx_14") {
+config("cxx_14_or_higher") {
   configs = [
-    "${current_toolchain_dir}/configs/cxx_standard:cxx_14",
+    "${current_toolchain_dir}/configs/cxx_standard:cxx_14_or_higher",
   ]
 }
 
-config("cxx_17") {
+config("cxx_17_or_higher") {
   configs = [
-    "${current_toolchain_dir}/configs/cxx_standard:cxx_17",
+    "${current_toolchain_dir}/configs/cxx_standard:cxx_17_or_higher",
   ]
 }
