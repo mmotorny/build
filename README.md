@@ -68,7 +68,7 @@ cp build/templates/*.gn .
 
 *Optional.* [Customize `BUILDCONFIG.gn`](/templates/README.md).
 
-Now you are ready to [write a `BUILD.gn` file](https://chromium.googlesource.com/chromium/src/tools/gn/+/HEAD/docs/quick_start.md#adding-a-build-file).
+Now you are ready to [write a `BUILD.gn` file](https://gn.googlesource.com/gn/+/master/docs/quick_start.md#Adding-a-build-file).
 
 
 
@@ -127,7 +127,7 @@ cp build/templates/*.gn .
 
 *Optional.* [Customize `BUILDCONFIG.gn`](/templates/README.md).
 
-Now you are ready to [write a `BUILD.gn` file](https://chromium.googlesource.com/chromium/src/tools/gn/+/HEAD/docs/quick_start.md#adding-a-build-file).
+Now you are ready to [write a `BUILD.gn` file](https://gn.googlesource.com/gn/+/master/docs/quick_start.md#Adding-a-build-file).
 
 
 
@@ -188,4 +188,4 @@ copy build\templates\*.gn .
 
 *Optional.* [Customize `BUILDCONFIG.gn`](/templates/README.md).
 
-Now you are ready to [write a `BUILD.gn` file](https://chromium.googlesource.com/chromium/src/tools/gn/+/HEAD/docs/quick_start.md#adding-a-build-file).
+Now you are ready to [write a `BUILD.gn` file](https://gn.googlesource.com/gn/+/master/docs/quick_start.md#Adding-a-build-file).
